@@ -1,4 +1,4 @@
 # Data-Science-Learning
 
 ## Editing the file
-It's a mrkdown file in this repository
+It's a markdown file in this repository
