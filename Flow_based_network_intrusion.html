@@ -8876,19 +8876,6 @@ Below is the implementation of Logistic Regression with hyperparameter tuning, w
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Fitting 10 folds for each of 3 candidates, totalling 30 fits
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
@@ -9101,19 +9088,6 @@ A confusion matrix is shown below for a minimum probability equal to the thresho
 <h2>Random Forest</h2>
 <p>Random Forest is often expected to outperform Logistic Regression in network intrusion tasks, as it can capture nonlinear patterns, interactions between features, and is generally more robust regarding noise. The Random Forest hyperparameter search was optimized to reduce computational cost/time by limiting tree complexity and reducing cross-validation folds, while preserving model comparability across experiments.
 <br/></p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Fitting 3 folds for each of 1 candidates, totalling 3 fits
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -9344,19 +9318,6 @@ There is a noticeable difference in the importance attributed to features "Subfl
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Fitting 3 folds for each of 20 candidates, totalling 60 fits
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
@@ -9568,19 +9529,6 @@ A confusion matrix is shown below for a minimum probability equal to the thresho
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2>LightGBM</h2>
 <p>LightGBM is a high-performance gradient boosting framework built on decision tree algorithms. It is widely used for ranking, classification, and many other machine learning tasks. Works particularly well with large datasets and a large number of independent variables, optimizing heavily for speed and memory efficiency. LightGBM grows trees leaf-wise, evaluates all leaves and expands the single leaf that reduces the loss the most. It uses histogram-based algorithms to group continuous feature values into discrete bins. This drastically reduces memory usage and speeds up training. It can handle categorical features directly without requiring to manually apply encoding first. Because leaf-wise growth is quite aggressive, LightGBM can easily overfit, especially on smaller datasets. To prevent this, careful tuning of hyperparameters like max_depth, num_leaves, and min_data_in_leaf is strictly required.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Fitting 3 folds for each of 20 candidates, totalling 60 fits
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -9801,19 +9749,6 @@ A confusion matrix is shown below for a minimum probability equal to the thresho
 <h2>CatBoost</h2>
 <p>CatBoost is a high-performance gradient boosting framework built on decision tree algorithms. It is widely used for classification, regression, and ranking tasks, particularly on tabular data. CatBoost introduces ordered boosting, a technique designed to reduce overfitting by preventing information leakage during training. It also uses symmetric trees, where the same splitting condition is applied across each level, improving prediction speed and model stability. One of its main advantages is the ability to handle categorical features directly without requiring extensive preprocessing. CatBoost is generally robust to hyperparameter choices and requires less tuning compared to other gradient boosting frameworks. However, it can be slower to train than LightGBM, especially on very large datasets.</p>
 <p>Although CatBoost provides a large number of configurable hyperparameters, it typically requires less manual tuning than frameworks such as LightGBM or XGBoost, due to its robust default settings and built-in mechanisms for handling categorical features and reducing overfitting.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Fitting 3 folds for each of 9 candidates, totalling 27 fits
-</pre>
-</div>
 </div>
 </div>
 </div>
