@@ -8698,7 +8698,7 @@ memory usage: 308.7+ MB
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <br/>
-In this study only a subset of features was initially used (Flow Bytes/s, Flow Packets/s, Fwd Packets/s, Bwd Packets/s, Subflow Fwd Packets, Subflow Fwd Bytes, Packet Length Std, Packet Length Variance, Flow Duration, Init_Win_bytes_forward, Init_Win_bytes_backward, Down/Up Ratio, Label).
+In this study only a subset from the 79 initial features was used (Flow Bytes/s, Flow Packets/s, Fwd Packets/s, Bwd Packets/s, Subflow Fwd Packets, Subflow Fwd Bytes, Packet Length Std, Packet Length Variance, Flow Duration, Init_Win_bytes_forward, Init_Win_bytes_backward, Down/Up Ratio, Label).
 
 <p>There are 10 features with only one unique value, which imply they have zero variance and cannot help distinguishing Label 0 vs Label 1. Mathematically, for models like logistic regression, the coefficient becomes meaningless and it may even cause numerical instability in some cases. If any of these were included in the subset used, it would also be removed.</p>
 <p>Label feature contains three unique values. "BENIGN" will be replaced by 0 (normal), and "DDoS" and "PortScan" by 1 (attack). Label feature was renamed to Class. A space before or after each feature name was removed. A few rows with infinite values were removed. Rows with values of -1 in features "Init_Win_bytes_forward" and "Init_Win_bytes_backward" were removed as this is an indication that the information was not available or not applicable for a particular flow.
