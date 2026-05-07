@@ -6,10 +6,6 @@ body {
     padding: 40px 10px 40px 10px;
 }
 
-ul li {
-    display: block;
-    width: fit-content;
-}
 a {
     text-decoration: none;
     display: block;
