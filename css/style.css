@@ -6,8 +6,14 @@ body {
     padding: 40px 10px 40px 10px;
 }
 
-a:link, a:visited {
+a:link {
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    width: fit-content;
+}
+
+a:visited {
+    text-decoration: none;
+    display: inline-block;
     width: fit-content;
 }
