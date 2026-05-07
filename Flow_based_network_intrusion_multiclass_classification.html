@@ -7831,7 +7831,25 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data-Wrangling">Data Wrangling<a class="anchor-link" href="#Data-Wrangling">¶</a></h1><p>Two datasets with exact the same 79 features, one with DDoS attacks and other with PortScan-related traffic, were used. After loading and merging the datasets, data was prepared.
+<h1 id="Methodology">Methodology<a class="anchor-link" href="#Methodology">¶</a></h1><ul>
+<li>Data Wrangling and Preprocessing</li>
+<li>Exploratory Data Analysis and Feature Evaluation</li>
+<li>Model Training</li>
+<li>Model Comparison and Selection</li>
+<li>Feature Importance Analysis</li>
+<li>Error and Calibration Analysis</li>
+<li>Final Evaluation and Conclusion</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Data-Wrangling-and-Preprocessing">Data Wrangling and Preprocessing<a class="anchor-link" href="#Data-Wrangling-and-Preprocessing">¶</a></h1><p>Two datasets with exact the same 79 features, one with DDoS attacks and other with PortScan-related traffic, were used. After loading and merging the datasets, data was prepared.
 <br/></p>
 </div>
 </div>
@@ -8646,7 +8664,7 @@ In this study only a subset from the 79 initial features was used (Flow Bytes/s,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">¶</a></h1><p>Feature correlation analysis helped identify strongly correlated feature pairs, allowing for the removal of redundant variables and improving model robustness. A correlation threshold of 0.95 was defined, such that if two independent variables exhibited a correlation equal to or greater than this value, one of them would be removed. This approach helps mitigate multicollinearity and reduces the risk of overfitting, particularly in linear models.
+<h1 id="Exploratory-Data-Analysis-and-Feature-Evaluation">Exploratory Data Analysis and Feature Evaluation<a class="anchor-link" href="#Exploratory-Data-Analysis-and-Feature-Evaluation">¶</a></h1><p>Feature correlation analysis helped identify strongly correlated feature pairs, allowing for the removal of redundant variables and improving model robustness. A correlation threshold of 0.95 was defined, such that if two independent variables exhibited a correlation equal to or greater than this value, one of them would be removed. This approach helps mitigate multicollinearity and reduces the risk of overfitting, particularly in linear models.
 <br/></p>
 </div>
 </div>
@@ -8824,6 +8842,18 @@ Below, the summary statistics of the dataset reduced and prepared for the machin
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<br/>
+Due to the large skewness of the ANOVA F-statistics, a logarithmic transformation was applied to improve visualization and facilitate comparison between features.
+<br/>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput">
 <div class="jp-Cell-outputWrapper">
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
@@ -8883,9 +8913,9 @@ The boxplot analysis highlights a clear separation between classes driven by a s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<br/>
-In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
-<br/>
+<h1>Model Training</h1>
+<p>In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
+<br/></p>
 </div>
 </div>
 </div>
@@ -9883,7 +9913,7 @@ A confusion matrix is shown below for the model predictions obtained using the s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Model Comparison and Selection</h2>
+<h1>Model Comparison and Selection</h1>
 <p>The next step is to define the desired model outcome for the multiclass intrusion detection task. Unlike binary classification, where the focus is on distinguishing between malicious traffic and normal traffic, the multiclass setting requires the model to correctly differentiate between normal traffic (BENIGN) and multiple malicious traffics (DDoS and PortScan). As a result, overall accuracy alone is not sufficient to evaluate performance, since it may hide poor performance on individual classes.</p>
 <p>In this context, model selection is performed by first enforcing a class-specific recall, particularly for the malicious traffic categories (DDoS and PortScan), to ensure that malicious traffic is not missed. Among the models that satisfy these minimum recall requirements, the final selection is based on the best overall balance of F1Score and Matthews Correlation Coefficient (MCC), as these metrics provide a robust assessment of both class-wise performance and global predictive quality. This approach ensures that the selected model achieves strong detection performance across all malicious traffic types while maintaining a low rate of misclassification.</p>
 <p>This selection strategy reflects a practical decision framework for multiclass security systems, where reliable detection of all malicious traffic categories is prioritized over raw accuracy, and performance is optimized under constraints that reflect operational security requirements.
@@ -10104,7 +10134,7 @@ The confusion matrix shows that the model achieves near-perfect classification a
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Feature Importance Analysis</h2>
+<h1>Feature Importance Analysis</h1>
 <p>To better understand the behavior of the selected model, a feature importance analysis was conducted. This step aims to identify which variables contribute most to the model’s predictions and to assess whether these contributions are consistent with the patterns observed during the exploratory data analysis.</p>
 <p>The analysis reveals that a small subset of features dominates the model’s decision-making process. In particular, Subflow Fwd Bytes and Packet Length Std stand out as the most influential features across the top-performing models, with importance scores significantly higher than all other variables. This dominance indicates that traffic volume and variability in packet size are critical factors in distinguishing between traffic classes.</p>
 <p>This finding is consistent with earlier observations from the ANOVA analysis and boxplot exploration, where BENIGN traffic exhibited a wide spread with numerous outliers, DDoS traffic showed a more compact distribution with minimal overlap, and PortScan traffic was highly concentrated in lower value ranges. The clear separation in feature distributions across classes explains why these variables provide such strong discriminative power.
@@ -10118,7 +10148,7 @@ The confusion matrix shows that the model achieves near-perfect classification a
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Error Analysis</h2>
+<h1>Error and Calibration Analysis</h1>
 <p>Although the selected model achieves near-perfect classification performance, a closer inspection of the confusion matrix provides insight into the few remaining misclassifications. This analysis helps identify potential edge cases and assess whether the observed errors pose any practical concern.</p>
 <p>The number of misclassifications is extremely low across all classes. A very small number of BENIGN samples are incorrectly classified as malicious traffic, primarily as PortScan and only rarely as DDoS. Similarly, a limited number of PortScan instances are misclassified as BENIGN. DDoS detection is nearly perfect, with only negligible misclassification observed. Importantly, confusion between malicious traffic classes is virtually nonexistent, indicating that DDoS and PortScan traffic are clearly distinguishable by the model.</p>
 <p>The observed errors follow a consistent pattern: misclassifications occur mainly between BENIGN and PortScan traffic, suggesting that certain PortScan patterns share characteristics with normal network behavior. In contrast, DDoS traffic exhibits highly distinctive patterns and remains well separated in the feature space, resulting in highly reliable detection. The absence of meaningful confusion between DDoS and PortScan further demonstrates the model’s ability to discriminate between different types of malicious traffic.
@@ -10132,7 +10162,7 @@ The confusion matrix shows that the model achieves near-perfect classification a
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Conclusion</h2>
+<h1>Final Evaluation and Conclusion</h1>
 <p>This study developed and evaluated a multiclass classification model for flow-based network intrusion detection, with the objective of accurately distinguishing between BENIGN traffic, DDoS attacks and PortScan activity.</p>
 <p>The analysis showed that all evaluated models achieved near-perfect performance across standard metrics. As a result, model selection was guided not only by overall performance but also by operational constraints, particularly the requirement to maintain high recall for malicious traffic classes. Under these criteria, LightGBM was selected as the final model, as it provided the best balance between classification performance and robustness.</p>
 <p>The evaluation of the selected model confirmed its effectiveness. The confusion matrix demonstrated near-perfect classification with negligible misclassification and no confusion between malicious traffic types. The calibration analysis further showed that predicted probabilities are well aligned with observed outcomes, particularly in high-confidence regions, indicating reliable probabilistic outputs.</p>

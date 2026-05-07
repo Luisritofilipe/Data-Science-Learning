@@ -8,7 +8,7 @@
       margin: auto;
       padding: 20px;
   }
-</style>
+</style>  
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Predicting_diabetes_using_clinical_data_with_code</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -7897,7 +7897,24 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data-Wrangling">Data Wrangling<a class="anchor-link" href="#Data-Wrangling">¶</a></h1><p>The dataset contains nine independent variables and one target variable, named Type 2 Diabetic.
+<h1 id="Methodology">Methodology<a class="anchor-link" href="#Methodology">¶</a></h1><ul>
+<li>Data Wrangling and Preprocessing</li>
+<li>Exploratory Data Analysis and Feature Evaluation</li>
+<li>Model Training</li>
+<li>Model Comparison and Selection</li>
+<li>Final Evaluation and Conclusion</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Data-Wrangling-and-Preprocessing">Data Wrangling and Preprocessing<a class="anchor-link" href="#Data-Wrangling-and-Preprocessing">¶</a></h1><p>The dataset contains nine independent variables and one target variable, named Type 2 Diabetic.
 <br/></p>
 </div>
 </div>
@@ -7907,7 +7924,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"clinical dataset on type-2 diabetes.csv"</span><span class="p">)</span>
@@ -7934,7 +7951,7 @@ memory usage: 83.3 KB
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[86]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8096,7 +8113,7 @@ In the following table, features identified with "True" include rows with missin
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
@@ -8110,7 +8127,7 @@ In the following table, features identified with "True" include rows with missin
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[87]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>Pregnancies                 False
 Age                         False
@@ -8182,7 +8199,7 @@ The dataset summary statistics was used to define binning intervals for imputing
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">¶</a></h1><br/>
+<h1 id="Exploratory-Data-Analysis-and-Feature-Evaluation">Exploratory Data Analysis and Feature Evaluation<a class="anchor-link" href="#Exploratory-Data-Analysis-and-Feature-Evaluation">¶</a></h1><br/>
 Additional features were engineered to capture non-linear relationships and enhance the predictive power of the models. These features were designed to reflect meaningful interactions between clinical variables.
 
 <p>The BMI_Glucose feature combines body mass index (BMI) with glucose levels, capturing the interaction between metabolic load and glycemic state. The Age_BMI feature incorporates the relationship between Age and BMI, representing the cumulative effect of metabolic risk over time. Finally, the High_Glucose feature encodes elevated glucose levels using a nonlinear transformation above a threshold of 140, emphasizing the increased risk associated with higher glucose concentrations.</p>
@@ -8399,7 +8416,7 @@ The dataset exhibits a notable class imbalance, with 78.9% of observations corre
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [125]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [126]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">feature_correlation_check</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.95</span><span class="p">):</span>
@@ -8624,9 +8641,9 @@ The boxplot analysis reveals that Glucose, BMI_Glucose, High_Glucose, and Insuli
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<br/>
-In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
-<br/>
+<h1>Model Training</h1>
+<p>In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
+<br/></p>
 </div>
 </div>
 </div>
@@ -11355,7 +11372,7 @@ The engineered features appear among the most important variables, suggesting th
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Model Comparison and Selection</h2>
+<h1>Model Comparison and Selection</h1>
 <p>The next step is to define the desired model performance objective. In the context of diabetes diagnosis, minimizing false negatives is prioritized, as failing to identify positive cases has higher clinical risk, while a certain level of false positives is acceptable.</p>
 <p>Model selection is therefore performed by first identifying all threshold configurations satisfying the predefined constraints on precision and recall (equal or higher than 0.8). Within this feasible set, the optimal threshold for each model was selected by maximizing the Matthews Correlation Coefficient (MCC), ensuring a balanced trade-off between true positives, true negatives, false positives, and false negatives. This approach guarantees that the selected operating point achieves both the desired sensitivity and an overall balanced classification performance.
 <br/></p>
@@ -12056,10 +12073,20 @@ The SHAP dependence plot illustrates how the contribution of the feature Glucose
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Conclusion</h2>
+<h1>Final Evaluation and Conclusion</h1>
 <p>The dataset contains features that reliably capture patient conditions and provide strong signals for class separation. The inclusion of engineered features did not significantly improve the models’ ability to detect positive cases or reduce false negatives, suggesting that the original feature set already contains sufficient predictive information.</p>
 <p>Overall, the results indicate that model performance is largely driven by a small number of highly informative features, particularly Glucose, while other variables provide complementary but less critical contributions.
 <br/></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
