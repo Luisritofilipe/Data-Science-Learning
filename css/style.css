@@ -2,18 +2,18 @@ body {
     background-color: #ffffff;
     font-family: 'Calibri', sans-serif; /*Helvetica*/
     max-width: 1080px;
-    margin: auto;
+    margin: 20;
     padding: 40px 10px 40px 10px;
 }
 
 a:link {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     width: fit-content;
 }
 
 a:visited {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     width: fit-content;
 }
