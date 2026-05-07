@@ -7,7 +7,7 @@ body {
 }
 
 ul li {
-    display: inline-block;
+    display: block;
     width: fit-content;
 }
 a {
