@@ -8,7 +8,7 @@
       margin: auto;
       padding: 20px;
   }
-</style>  
+</style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Flow_based_network_intrusion_binary_classification_with_code</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -7897,7 +7897,24 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data-Wrangling">Data Wrangling<a class="anchor-link" href="#Data-Wrangling">¶</a></h1><p>Two datasets with exact the same 79 features, one with DDoS attacks and other with PortScan-related traffic, were used. After loading and merging the datasets, data was prepared.
+<h1 id="Methodology">Methodology<a class="anchor-link" href="#Methodology">¶</a></h1><ul>
+<li>Data Wrangling and Preprocessing</li>
+<li>Exploratory Data Analysis and Feature Evaluation</li>
+<li>Model Training</li>
+<li>Model Comparison and Selection</li>
+<li>Final Evaluation and Conclusion</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Data-Wrangling-and-Preprocessing">Data Wrangling and Preprocessing<a class="anchor-link" href="#Data-Wrangling-and-Preprocessing">¶</a></h1><p>Two datasets with exact the same 79 features, one with DDoS attacks and other with PortScan-related traffic, were used. After loading and merging the datasets, data was prepared.
 <br/></p>
 </div>
 </div>
@@ -8739,7 +8756,7 @@ In this study only a subset from the 79 initial features was used (Flow Bytes/s,
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">¶</a></h1><p>Feature correlation analysis helped identify strongly correlated feature pairs, allowing for the removal of redundant variables and improving model robustness. Below, the summary statistics of the dataset reduced and prepared for the machine learning algorithms. The dataset shows moderate class imbalance (69.3% malicious traffic).</p>
+<h1 id="Exploratory-Data-Analysis-and-Feature-Evaluation">Exploratory Data Analysis and Feature Evaluation<a class="anchor-link" href="#Exploratory-Data-Analysis-and-Feature-Evaluation">¶</a></h1><p>Feature correlation analysis helped identify strongly correlated feature pairs, allowing for the removal of redundant variables and improving model robustness. Below, the summary statistics of the dataset reduced and prepared for the machine learning algorithms. The dataset shows moderate class imbalance (69.3% malicious traffic).</p>
 <br/>
 </div>
 </div>
@@ -9097,9 +9114,9 @@ Overall, malicious traffic patterns appear more structured but also revealing sp
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<br/>
-In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
-<br/>
+<h1>Model Training</h1>
+<p>In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
+<br/></p>
 </div>
 </div>
 </div>
@@ -10943,7 +10960,7 @@ A confusion matrix is shown below for a minimum probability equal to the thresho
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Model Comparison and Selection</h2>
+<h1>Model Comparison and Selection</h1>
 <p>The next step is to define the desired model outcome. If minimizing false positives is the priority in malicious traffic detection, then configurations with higher precision should be preferred. However, this comes at the cost of increased false negatives, meaning that more malicious traffic may go undetected.</p>
 <p>Model selection is performed by first enforcing a minimum Recall of 0.99, ensuring that a sufficient proportion of malicious traffic is detected. Among the models satisfying this constraint, the one with the best metrics overall and calibration curve is selected, as it provides the best balance between precision and recall. This approach aligns model performance with the business requirements of maximizing malicious traffic detection while controlling the number of false positives. This selection process reflects a practical decision framework, where recall acts as a hard requirement and the remaining metrics are used for performance optimization within that constraint.
 <br/></p>
@@ -11528,8 +11545,18 @@ The SHAP dependence plot illustrates how Subflow Fwd Bytes influences model pred
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Conclusion</h2>
+<h1>Final Evaluation and Conclusion</h1>
 <p>Feature selection analysis, combined with correlation analysis, indicates that a reduced subset of variables captures most of the predictive signal, while several features are redundant, contribute negligibly, or introduce noise that can degrade model performance. The dataset contains features that provide a strong and clear signal for distinguishing malicious traffic from normal traffic, resulting in near-perfect class separation across multiple models. This suggests that the high performance observed is driven not only by model capability, but also by the strong intrinsic separability of the dataset in the selected feature space.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
