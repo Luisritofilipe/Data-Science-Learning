@@ -8,7 +8,7 @@
       margin: auto;
       padding: 20px;
   }
-</style>  
+</style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Credit_card_fraud_detection_with_code</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -7891,7 +7891,22 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">¶</a></h1><p>The dataset consists of 31 features. The "Time" feature corresponds to the time in seconds when each transaction occured, the "Amount" feature is the amount of each transaction, and the "Class" feature is a flag that identifies each transaction with an integer, being zero if is not considered fraudulent, and one if fraudulent. The fraud rate is 0.1727%, indicating a highly imbalanced target variable ("Class"). The remaining features are named with a label from "V1" to "V28", their values are float type and cannot be interpreted by their label meaning. The "Time" feature in this dataset ranges from 0 to 172792 seconds, corresponding to approximately two days or 48 hours.</p>
+<h1 id="Methodology">Methodology<a class="anchor-link" href="#Methodology">¶</a></h1><ul>
+<li>Exploratory Data Analysis and Feature Evaluation</li>
+<li>Model Training</li>
+<li>Model Comparison and Selection</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Exploratory-Data-Analysis-and-Feature-Evaluation">Exploratory Data Analysis and Feature Evaluation<a class="anchor-link" href="#Exploratory-Data-Analysis-and-Feature-Evaluation">¶</a></h1><p>The dataset consists of 31 features. The "Time" feature corresponds to the time in seconds when each transaction occured, the "Amount" feature is the amount of each transaction, and the "Class" feature is a flag that identifies each transaction with an integer, being zero if is not considered fraudulent, and one if fraudulent. The fraud rate is 0.1727%, indicating a highly imbalanced target variable ("Class"). The remaining features are named with a label from "V1" to "V28", their values are float type and cannot be interpreted by their label meaning. The "Time" feature in this dataset ranges from 0 to 172792 seconds, corresponding to approximately two days or 48 hours.</p>
 <p>Below, the dataset summary statistics.
 <br/></p>
 </div>
@@ -8603,9 +8618,9 @@ Higher average transaction amounts for fraudulent cases (Class = 1) are observed
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<br/>
-In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
-<br/>
+<h1>Model Training</h1>
+<p>In the next step, the dataset is split into training and testing sets to allow proper training of the classification models and unbiased evaluation of their performance.
+<br/></p>
 </div>
 </div>
 </div>
@@ -10274,7 +10289,7 @@ LightGBM assigns a similar pattern of feature importance to that of XGBoost. The
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2>Model Comparison and Selection</h2>
+<h1>Model Comparison and Selection</h1>
 <p>The next step is to define the desired model outcome. If minimizing false positives is the priority in fraud detection, then configurations with higher precision should be preferred. However, this comes at the cost of increased false negatives, meaning that more fraudulent transactions may go undetected. Conversely, if the objective is to detect as many fraudulent cases as possible, configurations with higher recall should be implemented. This approach reduces missed fraud but increases the number of false positives. The choice between these approaches depends on the requirements and risk tolerance of the decision-makers.</p>
 <p>Model selection is performed by first enforcing a minimum Recall of 0.8, ensuring that a sufficient proportion of fraudulent transactions are detected. Among the models satisfying this constraint, the one with the highest F1 Score is selected, as it provides the best balance between precision and recall. This approach aligns model performance with the business objective of maximizing fraud detection while controlling the number of false positives. This two-step selection process reflects a practical decision framework, where recall acts as a hard requirement and F1 Score is used for performance optimization within that constraint.</p>
 </div>
