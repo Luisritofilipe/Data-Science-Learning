@@ -2,7 +2,7 @@ body {
     background-color: #ffffff;
     font-family: 'Calibri', sans-serif; /*Helvetica*/
     max-width: 1080px;
-    margin: 0;
+    margin: auto;
     padding: 40px 10px 40px 10px;
 }
 
